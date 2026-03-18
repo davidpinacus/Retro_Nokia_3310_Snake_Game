@@ -1,3 +1,4 @@
+
 from scoreboard import Score
 from snake import Snake
 import time
@@ -21,7 +22,6 @@ screen.onkey(snake.move_left, "Left")
 screen.onkey(snake.move_right, "Right")
 
 start = True
-points.title()
 
 while start:
     screen.update()
@@ -31,6 +31,7 @@ while start:
         food.random_position()
         snake.snake_grow()
         points.increase_score()
+
     if (
         snake.movement.xcor() > 280
         or snake.movement.xcor() < -280
